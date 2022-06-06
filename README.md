@@ -38,4 +38,28 @@ Un Incremento es un peldaño concreto hacia el Objetivo del Producto. Cada Incre
 _La Definición de Terminado es una descripción formal del estado del Incremento cuando cumple con las medidas de calidad requeridas para el producto. En el momento en que un elemento del Product Backlog cumple con la Definición de Listo, nace un Incremento_
 
 
+### Base de datos Relacionales y No Relacionales
+Los desarrolladores de software debemos elegir entre bases de datos relacionales y no relacionales  para construir un nuevo sistema, y esto depende de lo que queramos hacer. 
+Hay 3 tipos de análisis de datos para mejorar la toma de decisiones: análisis descriptivo, análisis  prescriptivo y análisis predictivo. 
+ La base de datos relacionales se comenzó a usar en los años 80', y las no relacionales se empezaron  a utilizar entre 2012 y 2015. Sin embargo, hoy sigue siendo más popular la primera opción. 
+ 
+#### Bases de datos relacionales: 
+Colección de elementos de datos organizados en un conjunto de tablas formalmente descriptas, desde  donde se puede acceder a datos o volver a montarlos de muchas maneras sin tener que reorganizar  las tablas. La interfaz estándar es el lenguaje de consultas estructuradas o SQL, o RDBMS; que se  utiliza tanto para consultas interactivas, como para obtener información y recopilación de datos para  informes. 
+La organización de la información es en partes pequeñas y se integran con identificadores. Además,  tiene una mayor capacidad de almacenamiento, u son menos vulnerables ante fallas. Es un modelo que describe la estructura lógica. También describe cómo el usuario mantendrá y  accederá a los datos.  
+Para manipular los datos en SQL, se requiere primero determinar la estructura de éstos. 
 
+#### Bases de datos no relacionales: 
+Diseñadas para modelos de datos específicos con esquemas flexibles para crear aplicaciones  modernas. Son ampliamente reconocidas porque son fáciles de desarrollar, tanto en funcionalidad  como en rendimiento a escala. Además, puede usar documentos, gráficos, clave-valor, en-memoria y  búsqueda. 
+Éstas no tienen un identificador que sirva en relación entre conjuntos de datos y otros. La información  se organiza normalmente mediante documentos, y es muy útil cuando no tenemos un esquema exacto  para almacenar. En este documento las organizaciones pueden almacenar información de los clientes  
+como nombre, pedido, favorito, dirección, detalles de contacto y mucho más. También contiene una  carpeta semiestructurada con muchos archivos, pero no usa ningún formato de tabla. Los NOSQL tienen un sistema dinámico que no requiere estructura y puede almacenar de cualquier  manera: columnas, documentos, gráficos, etc, y cada documento puede tener su propia estructura, sin  afectar los demás. Almacena por colecciones. 
+Habitualmente los datos almacenados en tablas son relacionales, porque existe la posibilidad de  enlazar los datos de una tabla con otra, y los datos almacenados de un documento ya es no relacional,  pero no siempre tiene que ser así. Por ejemplo, los datos de una tabla pueden ser transcriptos a un  documento, dependiendo del punto de vista y la necesidad del usuario. 
+Tanto SQL como NOSQL son tipos de bases de datos recomendadas para utilizar a la hora de  comenzar un proyecto, y cada una tiene sus ventajas y desventajas. Por ejemplo, los sistemas  contables o de inventario, son sistemas que requieren transacciones de varias filas, para este tipo de  trabajos la mejor opción son SQL (MySQL). Pero si los sistemas de gestión de contenido, aplicaciones  móviles, sistema de análisis en tiempo real, bases de datos de un crecimiento rápido, con un esquema  descentralizado, la mejor opción son NOSQL (MongoDB). 
+  
+ Algunas de las ventajas de SQL son: mayor soporte y más variedad de herramientas debido a que  lleva más tiempo en el mercado, útil para manejar y obtener datos, permite agregar otros servidores. Algunas desventajas de SQL son: que no es flexible (antes de ingresar los objetos, deben estar  correctamente validados), mientras más compleja sea la base de datos requiere mayor procesamiento  y eso se puede ver reflejado en el rendimiento y consumo de recursos. 
+  
+ Ventajas de NOSQL son: permite alta escalabilidad (ayuda a reducir la carga de trabajo), flexible a  diferentes tipos de datos, los datos deben cumplir con el tipo de dato definido. Y algunas desventajas de NOSQL son: la integridad de los datos se ve afectado por el poco soporte,  menos seguridad al ejecutar consultas, no existe estandarización, es poco compatibles con las bases  SQL, casi todo su mantenimiento se debe realizar por consola pot las pocas herramientas existentes.
+Las bases de datos no relacionales no son el reemplazo de las bases relacionales, simplemente son  modelos diferentes que ofrecen ventajas y soluciones al momento de utilizarlas. 
+
+Realicemos una tabla de comparación para cubrir las diferencias más importantes y esenciales de cada  una:
+
+![cuadro](https://docs.google.com/drawings/d/1LAkEDXmDLzxuA5ooUZCJAlbFsz-5Q9fIIylTOUev1Fc/edit?usp=sharing)
