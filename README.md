@@ -63,3 +63,66 @@ Las bases de datos no relacionales no son el reemplazo de las bases relacionales
 Realicemos una tabla de comparación para cubrir las diferencias más importantes y esenciales de cada  una:
 
 ![cuadro](https://docs.google.com/drawings/d/1LAkEDXmDLzxuA5ooUZCJAlbFsz-5Q9fIIylTOUev1Fc/edit?usp=sharing)
+
+### Diseño de bases de datos relacionales
+En este tema se estudia un aspecto fundamental de las bases de datos: su diseño. En las bases de datos se ha establecido un ciclo de desarrollo que consta de tres etapas de diseño: el diseño conceptual, el diseño lógico y el diseño físico
+ 
+ #### 1. Diseño conceptual.
+Su objetivo es definir las entidades y las relaciones entre ellos de forma abstracta, sin centrarse en ningún modelo lógico en concreto (como el relacional, el orientado a objetos, el jerárquico o el de red).
+_Herramienta_: Modelo conceptual de datos. Se usa alguna variante del modelo entidad-relación para las bases de datos relacionales.
+Resultado: Esquema conceptual de la base de datos.
+ 
+   #### 2. Diseño lógico. 
+Su objetivo es definir el esquema de la base de datos según el
+modelo que implementa el SGBD objetivo.
+_Herramienta_: Modelo lógico de datos. Se usa el modelo lógico que implemente el sistema de gestión de bases de datos objetivo, pero es independiente de los aspectos físicos. Se usan técnicas formales para verificar la calidad del esquema lógico; la más usual es la normalización. En el modelo relacional se usan las tablas.
+_Resultado_: Esquema lógico de la base de datos.
+ 
+#### 3. Diseño físico. 
+Su objetivo es definir el esquema físico de la base de datos de forma que se den todas las instrucciones para que un DBA pueda implementar la base de datos sin ninguna ambigüedad. Se considera el rendimiento como un aspecto que no se ha tratado en las etapas anteriores.
+_Herramienta_: Modelo físico de datos. Se consideran todos los detalles de la implementación física: organización de archivos e índices para el SGBD considerado.
+_Resultado_: Esquema físico de la base de datos.
+ 
+### Diseño conceptual
+ 
+#### Diagramas entidad-relación (E-R)
+Un diagrama es una herramienta para el modelado de datos que permite representar las entidades relevantes de un sistema de información así como sus interrelaciones y propiedades.
+El diseño del modelo E-R a partir del análisis inicial no es directo. A un mismo análisis le corresponden muchos diseños "candidatos". Hay varios criterios, pero ninguno es definitivo. De un buen diseño depende:
+            Eficiencia: Es muy importante en las BD cuando se manejan grandes cantidades de datos.
+            Simplicidad del código: Se cometen menos errores.
+            Flexibilidad: Se refiere a que el diagrama sea fácil de modificar.
+Denominado por sus siglas como E-R. Este modelo representa a la realidad a través de un esquema gráfico empleando la terminología de Entidades, que son objetos que existen y son los elementos principales que se identifican en el problema a resolver con el diagramado y se distinguen de otros por sus características particulares denominadas Atributos.
+El enlace que rige la unión de las entidades esta representada por la relación del modelo. En un DER, cada entidad se representa mediante un rectángulo, cada relación mediante un rombo y cada atributo mediante un círculo.
+
+![DER](https://upload.wikimedia.org/wikipedia/commons/f/f6/Ejemplo_Diagrama_E-R_extendido.PNG)
+
+#### Entidad
+Se trata de un objeto del que se recoge información de interés de cara a la base de datos. Gráficamente se representan mediante un rectángulo. Un ejemplo seria la entidad alumno, donde se recogerían los datos relativos a los alumnos de una escuela, como puede ser el nombre, el número telefono, la dirección, etc.
+Dentro de las entidades pueden ser fuertes o débiles. Las fuertes son las que no dependen de otras entidades para existir, mientras que las entidades débiles siempre dependen de otra entidad sino no tienen sentido por ellas mismas.
+ 
+#### Relación
+Podemos definir la relación como una asociación de dos o más entidades. A cada relación se le asigna un nombre para poder distinguirla de las demás y saber su función dentro del modelo entidad-relación.
+Las relaciones se representan gráficamente con rombos, dentro de ellas se coloca el nombre de la relación.
+Mediante líneas se conectan las entidades con las relaciones, igual que las entidades con los dominios, representando a los atributos.
+Otra característica es el tipo de correspondencia entre dos relaciones;
+1:1. Uno a uno, a cada ocurrencia de una entidad le corresponde como máximo una ocurrencia de la otra entidad relacionada.
+1:N. Uno a Mucho, a cada ocurrencia de la entidad A le pueden corresponder varias de la entidad B.
+N:M. Muchos a muchos, cada ocurrencia de una entidad puede contener varias de la otra entidad relacionada y viceversa.
+  
+#### Atributo
+ Es cada uno de los componentes que determinan una entidad.
+   Cada atributo tiene asociado un dominio: el conjunto de valores que puede tomar.
+   La entidad del ejemplo anterior viene determinada por los valores de sus atributos DNI, Nombre y Apellidos, Teléfono, Domicilio y COU.
+   En el enfoque clásico serían los campos de los registros.
+•     Atributos monovalorados y multivalorados: Los atributos multivalorados son los que pueden contener más de un valor simultáneamente, y monovalorados a los que sólo pueden contener un valor.
+    Por ejemplo, una persona puede tener varios números de teléfono (casa, trabajo, móvil) y puede que nos interese tenerlos todos. En este caso haremos de teléfono un atributo multivalorado.
+•     Atributos simples y compuestos: Un atributo es compuesto cuando puede descomponerse en otros componentes o atributos más pequeños, y simple en otro caso.
+    Por ejemplo, en el caso del domicilio puede que nos interese descomponerlo a su vez en calle, el número y la ciudad por separado.
+•    Clave: Es un atributo o conjunto de atributos cuyos valores identifican unívocamente cada entidad.
+     Por ejemplo, DNI es un atributo clave del tipo de entidad Alumnos. Esto significa que los valores de la clave no se pueden repetir en el conjunto de entidades. En el ejemplo anterior ningún DNI se debería repetir en una instancia del tipo de entidad Alumnos.
+ 
+El concepto de clave distingue tres claves diferentes:
+Superclave. Es cualquier conjunto de atributos que pueden identificar unívocamente a una tupla.
+Clave candidata.  Es el menor conjunto de atributos que puede formar clave. Puede haber varias en una tabla.
+ClavePrimaria. Es la clave candidata que distingue el usuario para identificar unívocamente cada tupla. Es importante en cuanto al aspecto del rendimiento, como se verá en el apartado dedicado al diseño físico.
+
