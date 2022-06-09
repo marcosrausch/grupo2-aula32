@@ -126,3 +126,15 @@ Superclave. Es cualquier conjunto de atributos que pueden identificar unívocame
 Clave candidata.  Es el menor conjunto de atributos que puede formar clave. Puede haber varias en una tabla.
 ClavePrimaria. Es la clave candidata que distingue el usuario para identificar unívocamente cada tupla. Es importante en cuanto al aspecto del rendimiento, como se verá en el apartado dedicado al diseño físico.
 
+#### **Campo** 
+En informática, un campo es un espacio de almacenamiento para un dato en particular. En las bases de datos, un campo es la mínima unidad de información a la que se puede acceder; un campo o un conjunto de ellos forman un **registro**, donde pueden existir campos en blanco, siendo éste un error del sistema. En las hojas de cálculo los campos son llamados celdas.
+La mayoría de los campos tienen atributos asociados a ellos. Por ejemplo, algunos campos son numéricos mientras otros almacenan texto, también varía el tamaño de estos. Adicionalmente, cada campo tiene un nombre, hay un tipo de campo que es el generico o tambien llamado llave.
+Un ejemplo de campo, es una celda en Microsoft Office Excel.
+
+#### **Registro**
+Un registro es un conjunto de campos agrupados.
+Un grupo de celdas o la hoja de la información de los compañeros, por ejemplo.
+
+#### **Archivo**
+Un archivo informático es un conjunto de información que se almacena en algún medio de escritura que permita ser leído o accedido por una computadora. Un archivo es identificado por un nombre y la descripción de la carpeta o directorio que lo contiene. Los archivos informáticos se llaman así porque son los equivalentes digitales de los archivos en tarjetas, papel o microfichas del entorno de oficina tradicional. Los archivos informáticos facilitan una manera de organizar los recursos usados para almacenar permanentemente información dentro de un computador.
+
